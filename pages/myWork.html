@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="../style.css">
+  <link rel="stylesheet" href="style-myWork.css">
+  <title>Joe Chipperfield Web Developer</title>
+</head>
+<body>
+  <header>
+    <!-- Navigation Bar -->
+    <nav>
+        <div class="logo-container">
+          <h1>Joseph Chipperfield</h1>
+          <h3>Freelance Web Developer</h3>
+        </div>
+        <ul class="nav-links">
+          <li class="nav-link"><a class="link" href="../index.html">Home</a></li> 
+          <li class="nav-link"><a class="link" href="about.html">About Me</a></li>
+          <li class="nav-link"><a class="link" href="myWork.html">My Work</a></li>
+          <li class="nav-link"><a class="link" href="contact.html">Contact</a></li> 
+        </ul>
+        <!-- Burger Menu For Tablet/Mobile View -->
+        <div class="burger">
+          <div class="line"></div>
+          <div class="line"></div>
+          <div class="line"></div>
+        </div>
+    </nav>
+  </header>
+
+  <main>
+    <div class="work-container">
+      <h1 class="work-title">My Portfolio</h1>
+
+        <div class="work-item">
+          <img class="work-image" src="../img/joechip-thumb.png" alt="">
+          <div class="work-overlay">
+            <div class="image-title">Personal Portfolio</div>
+            <div class="image-description">Portfolio website to show what I can do and enable potential clients/businesses to contact me.</div>
+            <form action="pages/myWork.html">
+              <input type="submit" class="cta-hero" value="View Code" />
+            </form>
+          </div>
+        </div>
+
+    </div>
+    
+
+<!-- Bottom of page Cta section to progress through site onto next page
+        Eases the navigation of the site -->
+        <div class="progress-container">
+          <div class="progress-description">
+            <!-- An intor intro what the next page will include -->
+            <div class="progress-text">
+            <h1>Working Together</h1>
+              <p>Please get in touch so that we can work together to create a site that reflects your business.</p>
+              <!-- Cta button to progress -->
+              <form action="contact.html">
+                <input type="submit" class="cta-button" value="Contact Me" />
+            </form>
+            </div>
+        </div>
+      </div>
+  </main>
+
+  <footer>
+    <!-- Social media icons -->
+    <div class="icons">
+      <a href="#" class="fa fa-facebook"></a>
+      <a href="#" class="fa fa-twitter"></a>
+      <a href="#" class="fa fa-github"></a>
+      <a href="#" class="fa fa-linkedin"></a>
+    </div>
+    <div class="footer-line"></div>
+    <p class="copyright">	&#169;JosephChipperfield2020</p>
+  </footer>
+  
+  <script src="../burger-menu.js"></script>
+
+</body>
+</html>

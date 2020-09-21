@@ -1,0 +1,651 @@
+*{
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+body{
+  font-family: 'Heebo', sans-serif;
+}
+
+.logo-container{
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  margin-left: 5%;
+  cursor: context-menu;
+}
+
+.logo-container h1{
+  color: #fcfcfc;
+}
+
+.logo-container h3{
+  color: #18A0FB;
+}
+
+
+nav{
+  height:auto;
+  background-color:transparent;
+  display: flex;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1;
+  transition: 150ms ease-in-out;
+}
+
+.nav-links{
+  display: flex;
+  list-style: none;
+  justify-content: space-around;
+  flex: 1;
+  margin-right:5%;
+}
+
+.link{
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+  cursor: pointer;
+  color: #18A0FB;
+  margin: 0px 2px 0px 2px;
+}
+
+.link:hover{
+  color: #ffffff;
+  transition: 0.5s ease;
+}
+
+.link:visited{
+  text-decoration: none;
+  color: none;
+}
+
+.nav-scrolled{
+  background-color: #2c2c2c;
+}
+
+.hero{
+  height: 100vh;
+  width: 100%;
+  position: relative;
+  background-size: cover;
+  background-position: 50% 50%;
+  background-image: url('img/hero.jpg');
+  background-repeat: no-repeat;
+}
+
+.overlay{
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background: rgba(0,0,0,0.7);
+  color: white;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.hero-content{
+  margin: 0% 0% 0% 5%;
+}
+
+.hero-content h1{
+  font-size: 4rem;
+  margin-bottom: 10px;
+}
+
+.cta-hero{
+  font-size: 20px;
+  border: none;
+  padding: 10px;
+  background-color: #18A0FB;
+  color: #fcfcfc;
+  border-radius: 15px;
+  transition: 100ms linear;
+  cursor: pointer;
+}
+
+.cta-hero:active{
+  background-color:#c9c9c9;
+  box-shadow: 0 5px #666666;
+  transform: translateY(4px);
+}
+
+.scrolldown{
+  position:absolute;
+  bottom: 20px;
+  left: 50%;
+  width: 40px;
+  height: 40px;
+  transform: translateY(-80px) translateX(-50%) rotate(45deg);
+}
+
+.scrolldown span{
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  border-bottom: 2px solid #fcfcfc;
+  border-right: 2px solid #fcfcfc;
+  animation: animate 1.2s linear infinite;
+  opacity: 0;
+}
+
+.scrolldown span:nth-child(1){
+  transform: translate(-15px, -15px);
+  animation-delay: -0.4s;
+}
+.scrolldown span:nth-child(2){
+  transform: translate(0,0);
+  animation-delay: -0.2s;
+}
+
+.scrolldown span:nth-child(3){
+  transform: translate(15px, 15px);
+  animation-delay: 0s;
+}
+
+@keyframes animate{
+  0%{
+    top:-5px;
+    left:-5px;
+    opacity:0;
+  }
+  25%{
+    top:0px;
+    left:0px;
+    opacity:1;
+  }
+  50%, 100%{
+    top:5px;
+    left:5px;
+    opacity:0;
+  }
+}
+
+.intro{
+  background: #2c2c2c;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2;
+}
+
+.intro-text{
+  color: #18A0FB;
+  font-size: 3rem;
+}
+
+.hide{
+  background: #2c2c2c;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.hide span{
+  transform: translateY(400%);
+  display: inline-block;
+  margin: 20px;
+}
+
+.slider{
+  background: #505050;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  transform: translateY(100%);
+}
+
+main{
+  background-size: auto;
+  background-position: 50% 50%;
+  background-image: url('img/topography.png');
+  background-repeat: round;
+  z-index: -2;
+  min-height: 85vh;
+}
+
+/* Slogan and skills banner under main hero */
+.banner{
+  height: 30vh;
+  display: flex;
+  align-items: center;
+  background-color: #f3f3f3;
+  justify-content: center;
+}
+
+.banner-content{
+  width: 50%;
+  display: flex;
+}
+
+.slogan, .skills{
+  text-align: center;
+  margin: 10px 40px 10px 40px;
+  flex: 1;
+}
+
+span{
+  color: #18A0FB;
+}
+
+.skills{
+  font-size: 24px;
+  margin-top: 20px;
+}
+
+.lang-icon{
+  height: 60px;
+  margin: 20px;
+}
+
+.slogan{
+  font-size: 40px;
+}
+
+.latest-work{
+  display: flex;
+}
+
+.work-title{
+  width: 100%;
+  margin: 50px;
+  font-size: 3rem;
+  text-align: center;
+  font-weight: lighter;
+
+}
+
+/* Latest Work sections */
+.sites{
+  display: flex;
+  justify-content: space-around;
+  margin: 20px 0px 100px 0px;
+  width: 60%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.site-container{
+  width: 30%;
+  margin: 10px;
+  font-size: 18px;
+
+}
+
+.site-image{
+  width: 100%;
+  margin-bottom: 20px;
+  transition: 0.5s ease;
+}
+
+.site-image:hover{
+  transform: scale(1.1, 1.1);
+}
+
+.site-title{
+  margin: 10px;
+  text-align: center;
+  font-size: 30px;
+}
+
+/* Cta section at bottom of page */
+.progress-container{
+  width: 50%;
+  height: 30vh;
+  position: relative;
+  background-size: cover;
+  background-position: 50% 50%;
+  background-image: url('img/about-img-edit.jpg');
+  background-repeat: no-repeat;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 40px;
+}
+
+.progress-description{
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background: rgba(0,0,0,0.2);
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.progress-text{
+  width: 40%;
+  color: white;
+  margin-right: 60px;
+}
+
+.progress-text h1{
+  font-size: 3rem;
+}
+
+.progress-text p{
+  margin-top: 10px;
+}
+
+.cta-button{
+  font-size: 14px;
+  border: none;
+  padding: 10px;
+  background-color: #18A0FB;
+  color: #fcfcfc;
+  border-radius: 15px;
+  margin-top: 10px;
+}
+
+footer{
+  height: 15vh;
+  background-color: #2c2c2c;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+  bottom: 0;
+}
+ /* Icons container */
+.icons{
+  display: flex;
+}
+
+/* Icons Appearance */
+.fa {
+  padding: 20px;
+  font-size: 30px;
+  width: 70px;
+  margin: 10px;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 50%;
+  transition: 0.5s ease;
+  background: #2c2c2c;  
+  color: white;
+}
+
+/* Add a hover effect if you want */
+.fa:hover {
+  color: #18A0FB;
+  transform: scale(1.2, 1.2);
+}
+
+.footer-line{
+  background-color: #18A0FB;
+  height: 2px;
+  width: 80%;
+}
+
+.copyright{
+  margin: 20px;
+  color: white;
+  font-size: 14px;
+}
+
+/* Smaller Monitors */
+@media screen and (max-width: 1600px) {
+  .banner-content{
+    width: 100%;
+  }
+
+  .slogan{
+    font-size: 1.8rem;
+    margin: 25px 5px 5px 5px;
+  }
+  
+  .skills{
+    font-size: 1.3rem;
+    margin: 15px 5px 5px 5px;
+  }
+
+  .lang-icon{
+    height: 30px;
+  }
+
+  .sites{
+    width: 100%;
+  }
+
+}
+
+/* Tablet View */
+@media screen and (max-width: 1200px) {
+  .logo-container{
+    flex: 1;
+  }
+
+  main{
+    width: 100%;
+  }
+
+  .logo-container h3{
+    font-size: 1.2rem;
+  }
+
+  .hero-content h1{
+    font-size: 2rem;
+    margin-bottom: 10px;
+  }
+  
+  .cta-hero{
+    font-size: 1rem;
+  }
+
+  .slogan{
+    font-size: 1.4rem;
+    margin: 25px 5px 5px 5px;
+  }
+  
+  .skills{
+    font-size: 1rem;
+    margin: 15px 5px 5px 5px;
+  }
+
+  .lang-icon{
+    height: 30px;
+  }
+
+  .sites{
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .site-container{
+    width: 60%;
+  }
+
+  .progress-container{
+    height: 40vh;
+    width: 100%;
+    margin-bottom: 0px;
+  }
+
+  footer{
+    margin-top: 0px;
+  }
+
+}
+
+/*Progress container adjustments*/
+@media screen and (max-height: 1000px) {
+  .progress-container{
+    height: 50vh;
+  }
+
+  .progress-description h1{
+    font-size: 2rem;
+  }
+
+}
+/* Mobile View */
+@media screen and (max-width: 900px) {
+
+  /*Burger Menu Lines */
+  .line{
+    width: 30px;
+    height: 2px;
+    background: #ffffff;
+    margin: 5px;
+  }
+
+  .burger{
+    position: absolute;
+    cursor: pointer;
+    right: 5%;
+    top: 50%;
+    transform: translate(-5%, -50%);
+    z-index: 2;
+  }
+
+  nav{
+    position: fixed;
+    align-items: baseline;
+  }
+
+  .nav-links{
+    position: fixed;
+    background: #18A0FB;
+    height: 100vh;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    clip-path: circle(10px at 90% -10%);
+    -webkit-clip-path: circle(10px at 90% -10%);
+    transition: all 1s ease-out;
+  }
+
+  .nav-link{
+    font-size: 22px;
+    color: #ffffff;
+  }
+
+    .nav-links.open{
+      clip-path: circle(10px at 90% -10%);
+      -webkit-clip-path: circle(2000px at 90% -10%);
+      transition: all 1s ease-out;
+    }
+
+    .nav-link {
+      opacity: 0;
+    }
+
+    .link:visited{
+      color: #ffffff;;
+    }
+
+    .link{
+      font-size: 1.8rem;
+    }
+    
+    /*Allows links to fade in */
+    .nav-link:nth-child(1){
+      transition: all 0.5s ease 0.2s;
+    }
+
+    .nav-link:nth-child(2){
+      transition: all 0.5s ease 0.4s;
+    }
+
+    .nav-link:nth-child(3){
+      transition: all 0.5s ease 0.6s;
+    }
+
+    .nav-link:nth-child(4){
+      transition: all 0.5s ease 0.8s;
+    }
+
+    li.fade{
+      opacity: 1;
+    }
+
+      /*Joseph Chipperfield */
+    .logo-container h1{
+      font-size: 1.5rem;
+    }
+    
+    /*Freelance Web Developer */
+    .logo-container h3{
+      font-size: 1.2rem;
+    }
+
+    .hero-content h1{
+      font-size: 2rem;
+      margin-bottom: 10px;
+    }
+    
+    .cta-hero{
+      font-size: 1rem;
+    }
+
+    .intro-text{
+      font-size: 2rem;
+    }
+
+    .banner-content{
+      flex-direction: column;
+    }
+
+    .slogan{
+      font-size: 1rem;
+      margin: 25px 5px 5px 5px;
+    }
+    
+  .skills{
+    font-size: 0.8rem;
+    margin: 15px 5px 5px 5px;
+  }
+
+  .lang-icon{
+    height: 30px;
+  }
+
+  .sites{
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .site-container{
+    width: 70%;
+    margin-bottom: 30px;
+  }
+
+  .site-title{
+    font-size: 1.5rem;
+  }
+
+  .site-description{
+    font-size: 1rem;
+  }
+
+  .progress-container h1{
+    font-size: 1rem;
+  }
+  .progress-text p{
+    font-size: 0.8rem;
+  }
+}
