@@ -1,6 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-178732936-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-178732936-1');
+</script>
+
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -18,10 +28,10 @@
           <h3>Freelance Web Developer</h3>
         </div>
         <ul class="nav-links">
-          <li class="nav-link"><a class="link" href="index.html">Home</a></li> 
-          <li class="nav-link"><a class="link" href="pages/about.html">About Me</a></li>
-          <li class="nav-link"><a class="link" href="pages/myWork.html">My Work</a></li>
-          <li class="nav-link"><a class="link" href="pages/contact.html">Contact</a></li> 
+          <li class="nav-link"><a href="index.html">Home</a></li> 
+          <li class="nav-link"><a href="pages/about.html">About Me</a></li>
+          <li class="nav-link"><a href="pages/myWork.html">My Work</a></li>
+          <li class="nav-link"><a href="pages/contact.html">Contact</a></li> 
         </ul>
         <!-- Burger Menu For Tablet/Mobile View -->
         <div class="burger">
@@ -38,7 +48,7 @@
       <!-- Overlay for text/image opacity filter -->
       <div class="overlay">
         <div class="hero-content">
-        <h1>Hi, i'm a Web Developer </br> based in Bristol, UK</h1>
+        <h1>Junior Web Developer </br> based in Bristol, UK</h1>
         <form action="pages/myWork.html">
           <input type="submit" class="cta-hero" value="See My Work" />
         </form>
@@ -101,15 +111,11 @@
           <div class="site-description">
             <h2 class="site-title">My Personal Site</h2>
             <p class="site-description1">A personal business site, created using Html5, CSS3 and Javascript. Fully responsive with contact facilities and user engagement.</p>
+            <form action="https://github.com/Jo3Chip/Personal-Portfolio">
+              <input type="submit" class="cta-hero" id="site-code" value="View Code" />
+            </form>
           </div>
         </div>
-        <!--<div class="site-container">
-          <a href="#"><img src="img/site1.jpg" alt="" class="site-image">
-        <div class="site-description"></a>
-          <h2 class="site-title">Site 1</h2>
-          <p class="site-info">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam luctus eros elit, non placerat massa auctor sed. Quisque vel feugiat lacus, eget sollicitudin purus.</p>
-        </div>
-      </div>-->
     </div>
     <!-- Bottom of page Cta section to progress through site onto next page
         Eases the navigation of the site -->
@@ -145,6 +151,7 @@
   <script src="burger-menu.js"></script>
   <script src="nav-scroll.js"></script>
   <script src="slider.js"></script>
+  <script src="smoothScroll.js"></script>
 
 </body>
 </html>

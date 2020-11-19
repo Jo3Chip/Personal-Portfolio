@@ -11,6 +11,11 @@ main{
   padding: 30px 0px 0px 0px;
 }
 
+.mobile-info{
+  font-size: 1rem;
+  visibility: hidden;
+}
+
 .work-container{
   display: flex;
   flex-flow: wrap;
@@ -22,7 +27,7 @@ main{
 .work-item{
   position: relative;
   width: 400px;
-  margin:40px
+  margin:0px 0px 40px 0px;
 }
 
 .work-image{
@@ -73,5 +78,32 @@ main{
   width: 80%;
   text-align: center;
   margin-bottom: 10px;
+}
+
+@media screen and (max-width: 900px){
+
+  .work-title{
+    font-size: 2rem;
+  }
+
+  .mobile-info{
+    visibility: visible;
+  }
+
+  .image-title{
+    font-size: 1rem;
+  }
+
+  .image-description{
+    font-size: .8rem;
+  }
+
+  .work-overlay:active > * {
+    transform: translateY(0);
+  }
+  
+  .work-overlay:active{
+    opacity: 1;
+  }
 }
 
